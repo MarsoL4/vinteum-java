@@ -25,7 +25,7 @@ public class Jogador {
         return cartas;
     }
 
-    public boolean isParou() {
+    public boolean parou() {
         return parou;
     }
 
