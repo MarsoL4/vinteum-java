@@ -25,7 +25,7 @@ public class Jogo {
             return "Empatou";
         }
 
-        if (ComputadorEstourou() || jogador.getPontos() > computador.getPontos()){
+        if (ComputadorEstourou() || !JogadorEstourou() && jogador.getPontos() > computador.getPontos()){
             return "Você ganhou!";
         }
 
