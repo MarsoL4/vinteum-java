@@ -25,11 +25,7 @@ public class Jogo {
         //ou
         //os dois pararam
     
-        if (JogadorEstourou() || ComputadorEstourou()){
-            return true;
-        }
-
-        if (jogador.parou() && computador.parou()){
+        if (JogadorEstourou() || ComputadorEstourou() || osDoisPararam()){
             return true;
         }
 
@@ -42,5 +38,9 @@ public class Jogo {
 
     private boolean ComputadorEstourou(){
         return computador.getPontos() > 21;
+    }
+
+    private boolean osDoisPararam(){
+        return jogador.parou() && computador.parou();
     }
 }
