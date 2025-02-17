@@ -20,4 +20,10 @@ public class Monte {
     public void embaralhar(){
         Collections.shuffle(cartas);
     }
+
+    public Carta virar(){
+        var carta = cartas.get(0);
+        cartas.remove(0);
+        return carta;
+    }
 }
