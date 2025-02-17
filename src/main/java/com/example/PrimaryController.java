@@ -18,7 +18,14 @@ public class PrimaryController {
     private Jogo jogo;
 
     public void turno(){
+        jogo.distribuirCartaParaJogador(jogo.jogador);
+        jogo.distribuirCartaParaJogador(jogo.computador);
 
+        if (jogo.acabou()){
+            resultado.setText(jogo.resultado());
+        }
+
+        atualizar(); //Atualiza a tela do jogo
     }
 
     public void atualizar(){
