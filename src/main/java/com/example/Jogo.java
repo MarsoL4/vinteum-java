@@ -20,16 +20,20 @@ public class Jogo {
         return carta;
     }
 
-    public boolean acabou(){
-        //alguém estourou
-        //ou
-        //os dois pararam
-    
-        if (JogadorEstourou() || ComputadorEstourou() || osDoisPararam()){
-            return true;
+    public String resultado(){
+        if (JogadorEstourou() && ComputadorEstourou() || jogador.getPontos() == computador.getPontos()){
+            return "Empatou";
         }
 
-        return false;
+        if (ComputadorEstourou() || jogador.getPontos() > computador.getPontos()){
+            return "Você ganhou!";
+        }
+
+        return "Você Perdeu";
+    }
+
+    public boolean acabou(){
+        return JogadorEstourou() || ComputadorEstourou() || osDoisPararam()
     }
 
     private boolean JogadorEstourou(){
