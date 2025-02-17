@@ -9,17 +9,8 @@ public class Monte {
     public Monte (){
         for (int numero = 0; numero <= 13; numero++) {
             cartas.add(new Carta(numero, Naipe.Hearts));
-        }
-
-        for (int numero = 0; numero <= 13; numero++) {
-            cartas.add(new Carta(numero, Naipe.Clubs));
-        }
-        
-        for (int numero = 0; numero <= 13; numero++) {
             cartas.add(new Carta(numero, Naipe.Diamonds));
-        }
-
-        for (int numero = 0; numero <= 13; numero++) {
+            cartas.add(new Carta(numero, Naipe.Clubs));
             cartas.add(new Carta(numero, Naipe.Spades));
         }
     }
