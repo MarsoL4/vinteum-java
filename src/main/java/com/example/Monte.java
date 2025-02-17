@@ -8,13 +8,11 @@ public class Monte {
 
     public Monte (){
         for (int numero = 0; numero <= 13; numero++) {
-            for (Carta carta : cartas) {
+            for (Naipe naipe : Naipe.values()) {
+                cartas.add(new Carta(numero, naipe));
                 
             }
-            cartas.add(new Carta(numero, Naipe.Hearts));
-            cartas.add(new Carta(numero, Naipe.Diamonds));
-            cartas.add(new Carta(numero, Naipe.Clubs));
-            cartas.add(new Carta(numero, Naipe.Spades));
+
         }
     }
 }
