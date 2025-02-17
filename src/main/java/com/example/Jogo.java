@@ -33,7 +33,7 @@ public class Jogo {
     }
 
     public boolean acabou(){
-        return JogadorEstourou() || ComputadorEstourou() || osDoisPararam()
+        return JogadorEstourou() || ComputadorEstourou() || osDoisPararam();
     }
 
     private boolean JogadorEstourou(){
